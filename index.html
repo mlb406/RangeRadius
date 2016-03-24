@@ -5,12 +5,22 @@
 		<title>Range Radius</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script>
+		function getLocation() {
+			var location = $("#location").val();
+			console.log(location);
+		}
+		
+		$(function() {
+			$("#submit").click(getLocation());
+		});
 		//<iframe src="https://www.freemaptools.com/radius-around-point.htm?clat=52.689148&clng=-0.002014&r=2035&lc=FFFFFF&lw=1&fc=00FF00&mt=r&fs=true&nomoreradius=true"><p>Iframes are not available on this device.</p></iframe>
 		</script>
 	</head>
 	<body>
-	<div id="ifrm">
-		<iframe src="https://www.freemaptools.com/radius-around-point.htm?clat=52.689148&clng=-0.002014&r=2035&lc=FFFFFF&lw=1&fc=00FF00&mt=r&fs=true&nomoreradius=true"><p>Iframes are not available on this device.</p></iframe>
-	</div>
+		<input type="text" id="location"><br>
+		<button id="submit">Submit</button><br>
+		<div id="ifrm">
+			<iframe src="https://www.freemaptools.com/radius-around-point.htm?clat=52.689148&clng=-0.002014&r=2035&lc=FFFFFF&lw=1&fc=00FF00&mt=r&fs=true&nomoreradius=true"><p>Iframes are not available on this device.</p></iframe>
+		</div>
 	</body>
 </html>
